@@ -1,9 +1,6 @@
 doctest: required files are all here.
 >> require '../lib/fizzbuzzdazzkezz'
 => true
-doctest: aliased method is working for Range.
->> (1..10).print_fbdk
-=> nil
 doctest: Integer FizzBuzz method with Hash = {3 => :Fizz, 5 => :Buzz, 7 => :Dazz, 9 => :Kezz}
 >> 945.fizzbuzz({3 => :Fizz, 5 => :Buzz, 7 => :Dazz, 9 => :Kezz})
 => "FizzBuzzDazzKezz"
@@ -13,4 +10,7 @@ doctest: Short test with Integers from one - fifteen
      results << num.fizzbuzz << "\n"
      end
 >> results
-=>  "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n" 
+=>  "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n"
+doctest: Short test for Range (1..15)
+>> (1..15).to_fbdk_a.join("\n")
+=>  "1\n2\nFizz\n4\nBuzz\nFizz\nDazz\n8\nFizzKezz\nBuzz\n11\nFizz\n13\nDazz\nFizzBuzz"
