@@ -13,11 +13,11 @@ class TC_IntegerFizzBuzz < Test::Unit::TestCase
  
   def assert_methods_defined(clazz, methods)
      methods.each do |method|
-       assert clazz.method_defined?(method), undefined_method_string(clazz, method)
+       assert clazz.method_defined?(method), undefined_method_string(method)
     end
   end
   
-  def test_range_to_fdbk_a    
+  def test_range_to_fdbk_a
     $fizz_buzz_tests.each do |range, hash, expected_value|
       assert_equal expected_value, range.to_fbdk_a(hash), method_call_string(range, :to_fbdk_a, hash)
     end
